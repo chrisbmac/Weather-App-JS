@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chris: Open Weather App</title>
+		<link rel="stylesheet" type="text/css" href="./bundle.css" />
+        <link rel="stylesheet" type="text/css" href="./weather-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="./weather-icons-wind.css">
+        <link rel="stylesheet" type="text/css" href="./weather-icons.css">
+    </head>
+    <body>
+        <div class= "loading-overlay"></div>
+        
+            <div class = "top">
+                <div class = "top__heading">Chris's Weather Reporter</div>
+                <div class = "top__title">Select a Canadian city to see the current weather report:</div>
+                <div class = "top__button">
+                    <select class = "top__button__mybutton" id="myBtn">Select Location
+                        <option id="option">City, Province</option>
+                    </select>
+                </div>
+
+                <div class = "top__icon"><i class="wi wi-owm-803" id="clouds" value="90"></i></div>
+                <div class = "top__forecast" id ="forecast">Forecast</div>
+                <div class = "top__location" id = "location">Location</div>
+
+            </div>
+
+            <div class= "bottom" id="bottom">
+                <div class="seperator"></div>
+                <i class="wi wi-day-sunny" id="sunImg"> SUNRISE / SUNSET
+                    <div class = "bottom__sun" id="sun">
+                        <i class="wi wi-sunrise" id="psun"></i>
+                        <i class="wi wi-sunrise" id="psun1"></i>
+                        <p></p>
+                    </div>
+                </i>
+                <div class="seperatorVert"></div>
+                <div class="seperator"></div>
+                <i class="wi wi-thermometer"> TEMP
+                    <div class = "bottom__temp" id="temp">
+                        <i class="wi wi-celsius"id="celsImg1"> </i>
+                        <i class="wi wi-celsius"id="celsImg2"> </i>
+                        <i class="wi wi-celsius"id="celsImg3"> </i>
+                    </div>
+                    <br>
+                </i>
+                <div class="seperatorVert"></div>
+                <div class="seperator"></div>
+                <i class="wi wi-humidity"> HUMID
+                    <div class = "bottom__humid" id="humid">
+                        <p id="phumid"></p>
+                    </div>
+                </i>
+                <div class="seperatorVert"></div>
+                <div class="seperator"></div>
+                <i class="wi wi-barometer" id="airImg"> AIR
+                    <div class = "bottom__air" id="air">
+                        <p id="pair"></p>
+                    </div>
+                </i>
+                <div class="seperatorVert"></div>
+                <div class="seperator"></div>
+                <div>WIND <i class="" id="compass"></i> 
+                    <div class = "bottom__wind">
+                        <p id="pwind"></p>
+                    </div>    
+                </div>
+                
+            </div>
+            
+        
+        <div class = "footer">Powered by <a href="https://openweathermap.org/current#one">Open Weather Map</a> | <a href ="http://erikflowers.github.io/weather-icons/">weather-icons</a></div>
+
+
+
+        <script type="text/javascript" src="./bundle.js"></script>                
+    </body>
+</html>

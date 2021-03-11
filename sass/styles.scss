@@ -1,0 +1,198 @@
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+$device: "screen and (max-width:794px)";
+
+html {
+    height:100%;
+}
+.seperator {
+	display: none;
+	width: 100px;
+	height: 5px;
+	background-color: rgba(0, 0, 0, 0.267);
+	border-radius: 25px;
+	margin: 20px;
+	@media #{$device}{
+		display: block;
+	}
+}
+.seperatorVert {
+	display: block;
+	width: 5px;
+	height: 100px;
+	background-color: rgba(0, 0, 0, 0.267);
+	border-radius: 25px;
+	
+	@media #{$device}{
+		display: none;
+	}
+}
+
+body {
+    padding:0;
+	margin:0;
+	margin-left:15px;
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+	background: #a1adbb;
+	color:whitesmoke;
+	@media #{$device}{
+		background: darkslateblue;
+	}	
+}
+
+p {
+	margin-top: -4px;
+}
+.top {
+	display:flex;
+	flex-direction: column;
+	margin-top: 10px;
+	&__heading {
+		color: darken($color: #0000006c, $amount: 0);
+		margin-top: 10px;
+		font-size: large;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	&__title{
+		margin-top: 10px;
+		text-shadow: 1px 1px black;
+	}
+
+	&__button{
+		margin-top: 10px;
+	}
+
+	&__button__mybutton {
+		background-color: blue;
+		color:white;
+		border-radius: 25px;
+	}
+	&__button__dropdown{
+		display:none;
+		border: medium black;
+		background-color: whitesmoke;
+		color: black;
+		width:250px;
+		border-radius: .5%;
+	}
+
+	&__icon{
+		margin-top: 10px;
+	}
+
+	&__forecast {
+		margin-top: 10px;
+		font-size: x-large;
+		font-weight: bold;
+
+	}
+
+	&__location {
+		margin-top: 10px;
+		font-weight: bold;
+		text-decoration: underline;
+		padding-bottom: 10px;
+	}
+}
+
+.bottom {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-top: 10px;
+	text-align: left;
+	justify-content: space-evenly;
+	margin-right:30%;
+	
+	@media #{$device} {
+		& {
+			justify-content: space-between;
+			flex-direction: column;
+		}
+	}
+	&__sun{
+		margin-top: 10px;
+		margin-right: 10px;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	&__temp{
+		margin-top: 10px;
+		margin-right: 10px;
+		display:flex;
+		flex-direction: column;
+		
+		
+	}
+
+	&__humid {
+		margin-top: 10px;
+		margin-right: 10px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	&__air{
+		margin-top: 13px;
+		margin-right: 10px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	&__wind{
+		margin-top: 10px;
+		margin-right: 10px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	
+	&__bottom__celsImg{
+		display: flex;
+		flex-direction: row;
+	}
+
+}
+
+.show {display:block;}
+#compass {
+	font-size: large;
+	//margin-right: .063px;
+	margin-right:50px;
+}
+
+#forecastImage {
+	font-size: xx-large;
+	font-weight: bold;
+	
+}
+
+.loading-overlay {
+    position: fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    overflow: show;
+    margin: auto;
+    display:none;
+}
+
+.footer{
+	margin-top: 20%;
+}
+
